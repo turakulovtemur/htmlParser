@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Pizza>
+
+<div class="flex">
+    @foreach (var pizza in Model)
+    {
+        <div class="flex-item">
+            <div class="product_img"><img class="img_photo" src="@pizza.photo" /></div>
+            <div class="product_name">
+                @pizza.name
+            </div>
+            <div class="product-text">
+                @pizza.desc
+            </div>
+            <div class="pizza-size">
+                <div class="product-item">@pizza.size1</div>
+
+                <div class="product-item active">@pizza.size2</div>
+                <div class="product-item">@pizza.size3</div>
+            </div>
+            <div class="product_price_btn">
+                <div class="product_price">
+                    @pizza.price
+                    <span>&#8381</span>
+                </div>
+                <div class="product_weight">@pizza.weight</div>
+                <div class="product_half">1/2</div>
+                <div class="product_btn">В корзину</div>
+            </div>
+        </div>
+    }
+
+</div>

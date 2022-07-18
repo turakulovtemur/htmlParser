@@ -1,0 +1,71 @@
+﻿
+<div class="flex">   
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+     plitka = [
+        {
+            "photo": "/image/1.png",
+            "name": "XXXL",
+             "desc": "Сыр моцарелла, Соус '1000 островов', Куриный рулет, Ветчина, Колбаски охотничьи, Орегано, Бекон, Сервелат, Огурцы маринованные",
+            "size1": "30 см",
+            "size2": "40 см",
+            "size3": "60 см",
+            "weight": "1440 гр",
+            "price": "690 ",
+            "id": 0
+        },
+        {
+            "photo": "/image/2.png",
+            "name": "4 вкуса",
+            "desc": "Соус '1000 островов', Сыр моцарелла, Рулет куриный, Ветчина, Пепперони, Сыр пармезан, Орегано,",            
+            "size1": "30 см",
+            "size2": "40 см",
+            "size3": "60 см",
+            "weight": "540 гр",
+            "price": "420 ",
+            "id": 1
+        },
+        {
+            "photo": "/image/3.png",
+            "name": "Амазонка",
+            "desc": "Сыр моцарелла, Соус '1000 островов', Куриный рулет, Ветчина, Колбаски охотничьи, Орегано, Бекон, Сервелат, Огурцы маринованные",
+            "size1": "30 см",
+            "size2": "40 см",
+            "size3": "60 см",
+            "weight": "600 гр",
+            "price": "420 ",
+            "id": 2
+        },
+        {
+            "photo": "/image/4.png",
+            "name": "БананZZа",
+            "desc": "Бананы, Соус Гавайский, Сыр моцарелла, Ананас, Шоколад молочный, Кокос / миндаль, Орегано,",            
+            "size1": "30 см",
+            "size2": "40 см",
+            "size3": "60 см",
+            "weight": "390 гр",
+            "price": "520 ",
+            "id": 3
+        },
+    ];
+
+    $(plitka).each(function () {
+        $(".flex").append('<div class="flex-item">'+
+            '<div class="product_img"><img class="img_photo" src='+this.photo+'>'+'</div>'+
+            '<div class="product_name">'+this.name+'</div>'+
+            '<div class="product-text">' + this.desc + '</div>' +
+            '<div class="pizza-size"><div class="product-item">' + this.size1 + '</div><div class="product-item active">' + this.size2 + '</div><div class="product-item">' + this.size3 + '</div></div>' +
+            '<div class="product_price_btn"><div class="product_price">' + this.price + '<span>&#8381</span></div>' +
+            '<div class="product_weight">' + this.weight + '</div>' +
+            '<div class="product_half">1/2</div>'+
+            '<div class="product_btn">В корзину</div></div></div>')
+    })
+
+
+    
+
+</script>
